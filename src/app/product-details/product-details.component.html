@@ -1,0 +1,11 @@
+<h2 align="center">Book Details</h2>
+
+<div *ngIf="product" align="center">
+    <h3 style="color: indigo;"><b>{{ product.name }}</b></h3>
+    <img mat-card-image class="img" src="{{ product.img_url }}" height="20%" width="40%"><br>
+    <p>Price: {{ product.price }}</p>
+    <p>Author: {{ product.author }}</p>
+    <p>Publication:{{ product.publication }}</p>
+    <button mat-raised-button color="primary" (click)="addToCart(product)">Add To Cart</button><br>
+</div><br>
+<router-outlet></router-outlet>

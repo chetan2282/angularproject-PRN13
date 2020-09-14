@@ -1,0 +1,20 @@
+<a routerLink="/">
+<h1 align="center" style="color: indigo;"><b>Online Book Store</b></h1>
+</a>
+
+
+<br>
+<div class="button" align="end">
+<button mat-raised-button color="primary" (click)="adminLogin()">Admin Login</button>&nbsp;
+<button mat-raised-button color="primary" (click)="userLogin()">User Login</button>&nbsp;
+<button mat-raised-button color="primary" (click)="signUp()">Sign Up</button>&nbsp;
+<button mat-fab color="primary" routerLink="/cart">
+    <mat-icon>
+        <i class="material-icons">shopping_cart</i>
+    </mat-icon>
+</button>&nbsp;
+</div>
+<mat-divider></mat-divider>
+<router-outlet></router-outlet>
+<router-outlet></router-outlet>
+<router-outlet></router-outlet>

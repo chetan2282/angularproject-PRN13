@@ -1,0 +1,20 @@
+<h2 mat-dialog-title>User Login</h2>
+<mat-dialog-content class="mat-typography">
+        <form [formGroup]="userForm" (ngSubmit)="usLogin()">
+  
+            <label>
+              Username:&nbsp;
+              <input type="text" formControlName="userName" required>
+            </label>
+          <br>
+            <label>
+              Password:&nbsp;
+               <input type="password" formControlName="passWord" required>
+            </label>
+            <br>
+          </form>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+    <button mat-raised-button mat-dialog-close>Cancel</button>
+    <button mat-raised-button color="primary" routerLink="/product-list"type="submit"[disabled]="!userForm.valid">Login</button>
+</mat-dialog-actions>

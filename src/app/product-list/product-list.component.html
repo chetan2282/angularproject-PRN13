@@ -1,0 +1,30 @@
+<h2>Products</h2>
+<div class="content" fxLayout="row wrap"><br> 
+<div style="margin: 1.5cm;" fxFlex=25% *ngFor="let product of products; index as productId">
+<mat-card class="products">
+<mat-card-title align="center">
+        <a [title]="product.name + 'details'" [routerLink]="['/products',productId]">
+        {{ product.name }}
+    </a>
+</mat-card-title><br>
+<mat-divider></mat-divider>
+<img mat-card-image class="img" src="{{ product.img_url }}">
+<mat-divider></mat-divider>
+<mat-card-content>
+<p *ngIf="product.author">
+    Author: {{ product.author }}</p>
+<p *ngIf="product.pages">
+    Pages: {{ product.pages }}</p>
+<p *ngIf="product.publication">
+    Publication: {{ product.publication }}</p>
+<p *ngIf="product.price">
+    Price: {{ product.price }}</p>
+</mat-card-content>
+<mat-card-action>
+<button mat-raised-button color="primary" (click)="share()">
+    Add to cart
+</button>
+</mat-card-action>
+</mat-card>
+</div>
+</div>
