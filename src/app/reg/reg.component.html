@@ -3,40 +3,35 @@
         <form [formGroup]="regForm" (ngSubmit)="sigUp()">
   
             <label>
-              First Name:
-              <input type="text" formControlName="firstName" required>
-            </label>&nbsp;
+              Enter Name:
+              <input type="text" formControlName="name" required>
+            </label>
+            <br>
             <label>
-              Last Name:
-               <input type="text" formControlName="lastName" required>
-            </label><br>
-            <div formGroupName="address" required>
-                <h3>Address</h3>
-              
-                <label>
-                  Street:
-                  <input type="text" formControlName="street" required>
+              Enter email:
+               <input type="text" formControlName="email" required>
+            </label>
+            
+            <br>
+              <label>
+                  Enter Contact no. :
+                  <input type="text" formControlName="cno" placeholder=" " required>
                 </label>
               <br>
                 <label>
-                  City:
-                  <input type="text" formControlName="city" required>
+                  Set password:
+                  <input type="password" formControlName="pass" required>
                 </label>
                 <br>
                 <label>
-                  State:
-                  <input type="text" formControlName="state" required>
+                  Confirm Password:
+                  <input type="password" formControlName="pass1" required>
                 </label>
               <br>
-                <label>
-                  Zip Code:
-                  <input type="text" formControlName="zip" required>
-                </label>
-              </div>
           </form>
 </mat-dialog-content>
 <mat-dialog-actions align="end">
     <button mat-raised-button mat-dialog-close>Cancel</button>
       
-    <button mat-raised-button color="primary" type="submit"[disabled]="!regForm.valid" [mat-dialog-close]="true" cdkFocusInitial (click)="openSnackBar('Registered Successfully! Please Login to continue...','Close')">Register</button>
+    <button mat-raised-button color="primary" type="submit"[disabled]="!regForm.valid" [mat-dialog-close]="true" cdkFocusInitial (click)="onsub()">Register</button>
 </mat-dialog-actions>

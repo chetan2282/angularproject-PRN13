@@ -12,14 +12,12 @@ export class RegComponent implements OnInit {
 
   constructor(public dialog: MatDialog,private _snackBar: MatSnackBar) { }
   regForm = new FormGroup({
-    firstName: new FormControl(''),
-    lastName: new FormControl(''),
-    address: new FormGroup({
-      street: new FormControl(''),
-      city: new FormControl(''),
-      state: new FormControl(''),
-      zip: new FormControl('')
-    })
+    name: new FormControl(''),
+    email: new FormControl(''),
+    cno: new FormGroup({
+    pass: new FormControl(''),
+    pass1: new FormControl(''),
+     })
   });
   ngOnInit(): void {
   }
@@ -27,9 +25,10 @@ export class RegComponent implements OnInit {
   {
     console.warn(this.regForm.value);
   }
-  openSnackBar(message: string, action: string) {
-    this._snackBar.open(message, action, {
-      duration: 2000,
-    });
-  }
+onsub()
+{
+ alert("Registration Successful");
+}
+
+
 }
